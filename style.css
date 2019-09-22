@@ -1,0 +1,128 @@
+body{
+    margin:0px;
+    font-family: "華康儷中宋","微軟正黑體" ;
+}
+.header{
+    font-family: "Lucida Handwriting";
+    font-size: 45PX;color: white;
+    font-weight: bold;
+    text-align: center;
+    background-color: #85653f;
+    padding:18px 0px; 
+    
+}
+/* CSS Media Query */
+@media (max-width:500px){
+    /* 螢幕尺寸小於 500 像素的時候，額外套用這個區塊的設定*/
+    .header{
+        font-size: 30px;
+    }
+}
+.nav{
+    font-size: 24px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+/* 階層式的選擇題 */
+.nav>.item{
+    color: rgb(197, 26, 26);
+    padding: 30px;
+    cursor: pointer;
+}
+@media (max-width:500px){
+    .nav{
+        white-space: nowrap;
+        overflow-x:auto ;
+    }
+    /*螢幕尺寸小於 500 像素的時候，額外套用這個區塊的設定
+    .nav{
+        font-size: 16px;
+    }
+    .nav>.item{
+        padding:15px 10px;
+    }
+    */
+}
+/* 虛擬選擇器和其他選擇器搭配*/
+.nav>.item:hover{    
+    background-color: blanchedalmond;
+    color: indianred;
+}
+.visual{
+    height: 500px;
+    background-image:url(visual.jpg);
+    background-position: center center;
+    background-size: cover;
+
+    font-family: "MV Boli";
+    font-size: 50px;color: lightgoldenrodyellow;
+    text-align:center;
+    text-shadow: 0px 0px 5px rgb(161, 127, 127);
+    line-height: 300px
+}
+@media (max-width:500px){
+    .visual{
+        font-size: 25px;
+
+    }
+}
+
+/* CSS 排版工具: flexbox */
+.content{
+    display: flex;  /* 區塊並排 */
+    justify-content: center; /* 左右對齊 */
+    align-items: center; /* 垂直對齊 */
+}
+.content>.left{
+    width: 500PX;
+    padding-top: 20PX; 
+
+}
+.content>.right{
+    width: 500PX;
+    padding-top: 10PX; 
+    font-size: 18px;
+    text-align: center;
+}
+@media(max-width:500px){
+    .content{
+        flex-wrap: wrap; /* 讓 flexbox 中的區塊可以往下掉 */
+    }
+    .content>.left{
+        width: 95%;
+    }
+   
+    .content>.right{
+        width: 95%;
+    }
+}
+/* .left 中的細節*/
+.content>.left>.head{
+    width: 400px;height: 350px;
+    border-radius: 50%;
+}
+@media(max-width:500px){
+    .content>.left>.head{
+        width: 90%;height: auto;
+    }
+}
+
+.content>.right>.title{
+    font-size: 24px;
+}
+
+.content>.right>.introduce{
+    width: 400px;
+    height: 200px;
+    font-size: 24px;
+    padding-top: 1px;
+}
+.footer{
+    background-color: #85653f;
+    color: white;font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 30px 0px;
+}
+
